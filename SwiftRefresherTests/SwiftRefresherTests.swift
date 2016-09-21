@@ -35,6 +35,23 @@ class SwiftRefresherTests: XCTestCase {
         
     }
     
+    func testDedupeSortedList() {
+        
+        let arr1 = [1,  4,  21, 21, 50, 50, 50, 50, 100, 101]
+        let arrExpected1 = (arr: [1,  4,  21, 50, 100, 101], count: 6)
+        let arrActual1 = dedupeSortedArray(arr1)
+        
+        let arr2 = [8, 8, 8, 8]
+        let arrExpected2 = (arr: [8], count: 1)
+        let arrActual2 = dedupeSortedArray(arr2)
+        
+        XCTAssertEqual(arrExpected1.arr, arrActual1.arr)
+        XCTAssertEqual(arrExpected1.count, arrActual1.count)
+        XCTAssertEqual(arrExpected2.arr, arrActual2.arr)
+        XCTAssertEqual(arrExpected2.count, arrActual2.count)
+        
+    }
+    
     func testProductOf() {
         let expected1 = 1280
         let arr1 = [8, 5, 8 , 4]

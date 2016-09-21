@@ -21,3 +21,22 @@ public func productsDiff(of numbers:[Int]) -> [Int] {
     
     return returned
 }
+
+public func dedupeSortedArray(_ numbers: [Int]) -> (arr:[Int], count:Int) {
+    
+    guard numbers.count > 1 else {
+        return (arr: numbers, count: numbers.count)
+    }
+    
+    var returned = [Int]()
+    
+    for index in numbers.startIndex..<numbers.endIndex {
+        let contains = returned.contains(numbers[index])
+        
+        if(!contains) {
+            returned.append(numbers[index])
+        }
+    }
+    
+    return (arr: returned, count: returned.count)
+}
