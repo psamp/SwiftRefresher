@@ -10,6 +10,7 @@
 		743112741D91F87900C694EC /* SwiftRefresher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7431126A1D91F87900C694EC /* SwiftRefresher.framework */; };
 		743112791D91F87900C694EC /* SwiftRefresherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743112781D91F87900C694EC /* SwiftRefresherTests.swift */; };
 		7431127B1D91F87900C694EC /* SwiftRefresher.h in Headers */ = {isa = PBXBuildFile; fileRef = 7431126D1D91F87900C694EC /* SwiftRefresher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		743112851D91FB1E00C694EC /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743112841D91FB1E00C694EC /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		743112731D91F87900C694EC /* SwiftRefresherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftRefresherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		743112781D91F87900C694EC /* SwiftRefresherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRefresherTests.swift; sourceTree = "<group>"; };
 		7431127A1D91F87900C694EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		743112841D91FB1E00C694EC /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				7431126D1D91F87900C694EC /* SwiftRefresher.h */,
 				7431126E1D91F87900C694EC /* Info.plist */,
+				743112841D91FB1E00C694EC /* Math.swift */,
 			);
 			path = SwiftRefresher;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					743112691D91F87900C694EC = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					743112721D91F87900C694EC = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				743112851D91FB1E00C694EC /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +322,7 @@
 		7431127F1D91F87900C694EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -330,6 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.psamp.SwiftRefresher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -337,6 +344,7 @@
 		743112801D91F87900C694EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -357,6 +365,7 @@
 		743112821D91F87900C694EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftRefresherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -369,6 +378,7 @@
 		743112831D91F87900C694EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftRefresherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
