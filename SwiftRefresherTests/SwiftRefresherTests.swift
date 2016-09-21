@@ -9,37 +9,61 @@
 import XCTest
 import SwiftRefresher
 
+//input:            [10,  4,  1, 6,  2]
+//expected output = [48,120,480,80,240]
+
+
 class SwiftRefresherTests: XCTestCase {
+    
+    func testProductsDiff() {
+        
+        let arr1 = [10, 4, 1, 6, 2]
+        let arrExpected1 = [48, 120, 480, 80, 240]
+        let arrActual1 = productsDiff(of: arr1)
+        
+        let arr2 = [8, 8, 8]
+        let arrExpected2 = [64, 64, 64]
+        let arrActual2 = productsDiff(of: arr2)
+        
+        let arr3 = [100, 500, 45, 34, 0]
+        let arrExpected3 = [0, 0, 0, 0, 76500000]
+        let arrActual3 = productsDiff(of: arr3)
+        
+        XCTAssertEqual(arrExpected1, arrActual1)
+        XCTAssertEqual(arrExpected2, arrActual2)
+        XCTAssertEqual(arrExpected3, arrActual3)
+        
+    }
     
     func testProductOf() {
         let expected1 = 1280
-        let expectedArr1 = [8, 5, 8 ,4]
-        let actual1 = productOf(expectedArr1)
+        let arr1 = [8, 5, 8 , 4]
+        let actual1 = productOf(arr1)
         
         let expected2 = 64
-        let expectedArr2 = [8, 8]
-        let actual2 = productOf(expectedArr2)
+        let arr2 = [8, 8]
+        let actual2 = productOf(arr2)
         
         let expected3 = 55
-        let expectedArr3 = [55, 1]
-        let actual3 = productOf(expectedArr3)
+        let arr3 = [55, 1]
+        let actual3 = productOf(arr3)
         
         
         let expected4 = 1
-        let expectedArr4 = [1]
-        let actual4 = productOf(expectedArr4)
+        let arr4 = [1]
+        let actual4 = productOf(arr4)
         
         let expected5 = 0
-        let expectedArr5 = [1, 0]
-        let actual5 = productOf(expectedArr5)
+        let arr5 = [1, 0]
+        let actual5 = productOf(arr5)
         
         let expected6 = 0
-        let expectedArr6 = [0, 1]
-        let actual6 = productOf(expectedArr6)
+        let arr6 = [0, 1]
+        let actual6 = productOf(arr6)
         
         let expected7 = 0
-        let expectedArr7 = [8, 5, 0, 8 ,4]
-        let actual7 = productOf(expectedArr7)
+        let arr7 = [8, 5, 0, 8 ,4]
+        let actual7 = productOf(arr7)
         
         XCTAssertEqual(expected1, actual1)
         XCTAssertEqual(expected2, actual2)
